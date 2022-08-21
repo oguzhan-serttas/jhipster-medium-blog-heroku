@@ -21,13 +21,13 @@ services:
     # volumes:
     #   - ~/volumes/jhipster/blog/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=blog
+      - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
-      - 127.0.0.1:5432:5432
+      - 5433:5432
   jhipster-registry:
     image: jhipster/jhipster-registry:v7.3.0
     volumes:

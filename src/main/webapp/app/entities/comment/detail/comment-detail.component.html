@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="comment">
+      <h2 data-cy="commentDetailsHeading"><span jhiTranslate="blogApp.comment.detail.title">Comment</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ comment.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="blogApp.comment.comment">Comment</span></dt>
+        <dd>
+          <span>{{ comment.comment }}</span>
+        </dd>
+        <dt><span jhiTranslate="blogApp.comment.createdAt">Created At</span></dt>
+        <dd>
+          <span>{{ comment.createdAt | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="blogApp.comment.updatedAt">Updated At</span></dt>
+        <dd>
+          <span>{{ comment.updatedAt | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="blogApp.comment.person">Person</span></dt>
+        <dd>
+          <div *ngIf="comment.person">
+            <a [routerLink]="['/person', comment.person.id, 'view']">{{ comment.person?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="blogApp.comment.post">Post</span></dt>
+        <dd>
+          <div *ngIf="comment.post">
+            <a [routerLink]="['/post', comment.post.id, 'view']">{{ comment.post?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/comment', comment.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

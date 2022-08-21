@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220819141110",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "comment",
+  "fields": [
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Comment",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "comment",
+      "relationshipName": "person",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "comment",
+      "relationshipName": "post",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20220819141111",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jhi_like",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Like",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "like",
+      "relationshipName": "person",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "like",
+      "relationshipName": "post",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

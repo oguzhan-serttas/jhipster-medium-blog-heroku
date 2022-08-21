@@ -13,6 +13,14 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+java:
+  runtime:
+    version: 11
+
+medium:
+  base-url: https://api.medium.com/v1
+  access-token: 271b87d5bfc5e8aad4518284022108130880db68d900b0435227c81d3d098dccf
+
 logging:
   level:
     ROOT: INFO
@@ -52,9 +60,9 @@ spring:
       # it can be set to any label, branch or commit of the configuration source Git repository
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/blog
-    username: blog
-    password:
+    url: jdbc:postgresql://ec2-52-49-120-150.eu-west-1.compute.amazonaws.com:5432/d3kjq6qpjivd3g
+    username: heddvrdshyeuwu
+    password: 8ebb869b782a0998c1b9acadf5b13c5430a5cf1b9ed946b9274879bc2739124a
     hikari:
       poolName: Hikari
       auto-commit: false

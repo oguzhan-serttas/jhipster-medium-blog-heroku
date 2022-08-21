@@ -92,6 +92,7 @@
         <!-- jhipster-needle-maven-property -->
     </properties>
 
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -101,6 +102,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.24</version>
+                <scope>provided</scope>
+            </dependency>
+
             <!-- jhipster-needle-maven-add-dependency-management -->
         </dependencies>
     </dependencyManagement>
@@ -302,6 +311,11 @@
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
 
@@ -430,6 +444,11 @@
                                 <groupId>org.glassfish.jaxb</groupId>
                                 <artifactId>jaxb-runtime</artifactId>
                                 <version>${jaxb-runtime.version}</version>
+                            </path>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>1.18.24</version>
                             </path>
                             <!-- jhipster-needle-maven-add-annotation-processor -->
                         </annotationProcessorPaths>
@@ -1009,6 +1028,23 @@
                                     <artifactId>jhipster-framework</artifactId>
                                     <version>${jhipster-dependencies.version}</version>
                                 </dependency>
+                                <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+                                <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+                                <dependency>
+                                    <groupId>io.springfox</groupId>
+                                    <artifactId>springfox-swagger-ui</artifactId>
+                                    <version>2.9.2</version>
+                                </dependency>
+                                <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+                                <dependency>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                    <version>1.18.24</version>
+                                    <scope>provided</scope>
+                                </dependency>
+
+
+
                             </dependencies>
                         </plugin>
                     </plugins>

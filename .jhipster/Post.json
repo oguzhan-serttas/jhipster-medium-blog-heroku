@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220819141109",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "post",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Post",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "comment",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "like",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "like",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "person",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

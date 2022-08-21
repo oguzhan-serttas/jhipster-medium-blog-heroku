@@ -1,0 +1,66 @@
+{
+  "applications": "*",
+  "changelogDate": "20220819141108",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "person",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Person",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "post",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "comment",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "like",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "like",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "role",
+      "otherEntityRelationshipName": "task",
+      "ownerSide": true,
+      "relationshipName": "role",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

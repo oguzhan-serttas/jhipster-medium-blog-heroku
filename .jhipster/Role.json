@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20220819141112",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "role",
+  "fields": [
+    {
+      "fieldName": "role",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Role",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "role",
+      "ownerSide": false,
+      "relationshipName": "task",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

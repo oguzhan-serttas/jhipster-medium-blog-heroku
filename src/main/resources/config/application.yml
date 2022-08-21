@@ -16,6 +16,13 @@
 
 ---
 # Conditionally disable springdoc on missing api-docs profile
+java:
+  runtime:
+    version: 11
+medium:
+  base-url: https://api.medium.com/v1
+  access-token: 271b87d5bfc5e8aad4518284022108130880db68d900b0435227c81d3d098dccf
+
 spring:
   config:
     activate:
