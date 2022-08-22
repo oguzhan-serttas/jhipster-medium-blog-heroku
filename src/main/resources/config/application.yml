@@ -21,7 +21,7 @@ java:
     version: 11
 medium:
   base-url: https://api.medium.com/v1
-  access-token: 271b87d5bfc5e8aad4518284022108130880db68d900b0435227c81d3d098dccf
+  access-token: 21de7980fabaf217d91312f3e05efa38100fd4f8dc3ccb6647a109ea834ca56ec
 
 spring:
   config:
